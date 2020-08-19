@@ -25,8 +25,8 @@ class Graph {
 		void deleteNode(int node);
 		void deleteUEdge(int node1, int node2);
 		void printNodeList(void);
-    void dfs();
-    void bfs();
+    		void dfs();
+   		void bfs();
 		Graph(int size); //Constructor of the class
 };
 
