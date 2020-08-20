@@ -1,3 +1,4 @@
+  
 # include<iostream>
 
 using namespace std;
@@ -51,13 +52,17 @@ void Stack ::display(){
   }
 
 }
+int Stack ::top(){
+  return front->data;
+}
+
 // main function
 int main() {
 
     Stack s1;
     s1.push(10);
     s1.push(100);
-    //s1.pop();
+    //cout<<s1.top()<<endl;
     /*
         preform whatever operation you want on the stack
     */
