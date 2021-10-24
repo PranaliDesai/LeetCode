@@ -1,3 +1,4 @@
+
 #include<iostream>
 
 using namespace std;
@@ -14,7 +15,7 @@ class Queue{
     rear = front = -1;
   }
   void enqueue(int x);     
-  int dequeue();
+  void dequeue();
   void display();
 };
 
@@ -28,13 +29,14 @@ void Queue :: enqueue(int x){
   }
   else
   {
+    cout<<front<<" "<<rear<<endl;
       a[++rear] = x;
   }
 }
 
-int Queue :: dequeue(){
-  front+=1;
-  return a[front-1];  // following approach [B], explained above
+void Queue :: dequeue(){
+  if(front>rear) return;
+  front++;
 }
 
 
@@ -53,14 +55,14 @@ int main()
     Queue q;
     q.enqueue(10);
     q.enqueue(100);
-    q.enqueue(1000);
-    q.enqueue(1001);
-    q.enqueue(1002);
-    cout<<"deq"<<q.dequeue()<<endl;
-    q.enqueue(1003);
+    q.enqueue(11);
     q.dequeue();
     q.dequeue();
+    q.dequeue();
+  q.dequeue();
     q.enqueue(1004);
+  q.enqueue(1004);
+  q.enqueue(1004);
     
     q.display();
     
